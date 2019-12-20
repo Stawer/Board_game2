@@ -10,9 +10,9 @@
 
 //Asociations
 
-[Author]->[Game]
-[Supplier]->[Inventory]
-[Inventory]->[Store]
-[Game]->[Inventory]
-[Language]->[Game]
-[Type]->[Game]
+[Author]++1..* - 1<>[Game]
+[Supplier]++1..* - 1<>[Inventory]
+[Inventory]<>1..* - 1++[Store]
+[Game]++1..* - 1<>[Inventory]
+[Language]++1..* - 1<>[Game]
+[Type]++1..* - 1<>[Game]
