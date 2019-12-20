@@ -1,0 +1,18 @@
+//Boardgames
+// {type:class}
+[Game | name:string author_id:number type_id:string price:number language_id:number age:number number_of_players:number] 
+[Author | name:string]
+[Language | name:string initials:string]
+[Type | name:string]
+[Inventory | game_id:number quantity:number]
+[Store | street:number number:number city:string]
+[Supplier | name:string]
+
+//Asociations
+
+[Author]->[Game]
+[Supplier]->[Inventory]
+[Inventory]->[Store]
+[Game]->[Inventory]
+[Language]->[Game]
+[Type]->[Game]
